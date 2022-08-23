@@ -1,0 +1,26 @@
+XF86AudioLowerVolume
+    amixer sset Master 3%- && kill -42 $(pidof dwmblocks)
+
+XF86AudioRaiseVolume
+    amixer sset Master 3%+ && kill -42 $(pidof dwmblocks)
+
+XF86AudioMute
+    amixer set Master toggle && kill -42 $(pidof dwmblocks)
+
+ctrl + shift + space
+    setxkbmap -query | grep -q 'us' && setxkbmap gr || setxkbmap us; kill -41 $(pidof dwmblocks)
+
+super + e
+    pcmanfm
+
+ctrl + super + shift + f
+    firefox
+
+ctrl + super + shift + b
+    ~/Applications/BurpSuitePro/BurpSuitePro
+
+super + Escape
+    pkill -USR1 -x sxhkd
+
+ctrl + Print
+    flameshot gui

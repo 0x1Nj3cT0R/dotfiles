@@ -1,0 +1,14 @@
+[user]
+    name = 0x1Nj3cT0R
+    email = 0x1Nj3cT0R@protonmail.com
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = nvim
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+[pager]
+    diff = diff-highlight | less
+    log = diff-highlight | less
+    show = diff-highlight | less
+[pull]
+    ff = only
