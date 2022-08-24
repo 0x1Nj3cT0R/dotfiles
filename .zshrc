@@ -172,6 +172,8 @@ alias gl="git lg"
 alias ip="ip --color=auto"
 alias disconnect="sudo killall -SIGINT openconnect"
 
+export TERM=xterm-256color
+
 # Remove padding on the right prompt
 export ZLE_RPROMPT_INDENT=0
 
