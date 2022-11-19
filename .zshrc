@@ -151,6 +151,10 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "$rvm_path/scripts/completion" ]] && source "$rvm_path/scripts/completion"
 
+if [[ -z $TMUX ]]; then
+  export PATH="$PATH:$HOME/tools/john/run"
+fi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
