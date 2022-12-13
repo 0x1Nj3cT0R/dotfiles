@@ -24,6 +24,3 @@ super + Escape
 
 ctrl + Print
     flameshot gui
-
-F12
-    ~/.screenkey.sh

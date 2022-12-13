@@ -129,9 +129,7 @@ load-nvmrc
 
 if [[ -z $TMUX ]]; then
   export PATH="$HOME/.local/bin:$PATH"
-  export GOROOT="/usr/local/go"
-  export GOPATH="$HOME/go"
-  export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
+  export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 fi
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -146,14 +144,12 @@ eval "$(pyenv virtualenv-init -)"
 
 if [[ -z $TMUX ]]; then
   export PATH="$PATH:$HOME/.rvm/bin"
+  export PATH="$PATH:$HOME/tools/john/run"
+  export PATH="$PATH:$HOME/.cargo/env"
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "$rvm_path/scripts/completion" ]] && source "$rvm_path/scripts/completion"
-
-if [[ -z $TMUX ]]; then
-  export PATH="$PATH:$HOME/tools/john/run"
-fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
